@@ -1,0 +1,90 @@
+.root {
+    -fx-background-color: #141414; /* Темний фон для всього застосунку */
+}
+.label {
+    -fx-text-fill: #ffffff; /* Білий текст для всіх міток */
+    -fx-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Web", sans-serif;
+    -fx-font-size: 18;
+}
+#chatListLabel{
+    -fx-background-color: #1a1a1a;
+    }
+#messageList{
+    -fx-background-color: #1f1f1f;
+    }
+#selectedChat, #selectedChatLabel{
+    -fx-background-color: #292929;
+}
+#selectedChatLabel{
+    -fx-padding: 0 0 0 10;
+    -fx-font-weight: bold;
+}
+#chatBar{
+    -fx-padding: 5 5 5 15;
+}
+#chatListBar{
+    -fx-pref-height:40;
+    -fx-padding: 5 5 5 15;
+}
+#Chats, #chatList{
+    -fx-background-color: #1a1a1a;
+}
+#ArrowBack, #ArrowForward, #OptionsAndOther, #closeButton, #minimizeButton, #maximizeButton, #Logo{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+.list-view {
+    -fx-background-color: #1a1a1a; /* Темний фон для списків */
+    -fx-control-inner-background: #0a0a0a; /* Темний фон для елементів списку */
+    -fx-border-color: #0a0a0a; /* Сірий колір для кордонів списку */
+}
+.list-cell {
+    -fx-text-fill: #ffffff; /* Білий текст для елементів списку */
+    -fx-background-color: #0a0a0a; /* Темний фон для елементів списку */
+}
+.list-cell:filled:selected, .list-cell:filled:selected:focused {
+    -fx-background-color: #292929; /* Сірий фон для вибраних елементів списку */
+}
+.text-field {
+    -fx-text-fill: #ffffff; /* Білий текст для текстових полів */
+    -fx-background-color: #242424; /* Сірий фон для текстових полів */
+    -fx-pref-height: 52px ;
+}
+#searchField{
+    -fx-max-width: 448px;
+}
+#mainVertDivider{
+    -fx-pref-height:484px;
+    -fx-pref-width:1000px;
+}
+#sendButton {
+    -fx-background-color: #242424;
+    -fx-border-color: #666666; /* Кольори для top, right, bottom, та left сторін */
+    -fx-border-width: 0 0 0 2px; /* Товщина рамки для top, right, bottom, та left сторін */
+    -fx-pref-height: 52px ;
+    -fx-pref-width: 52px ;
+}
+#navBar {
+    -fx-background-color:#0a0a0a;
+    -fx-pref-height: 48px;
+}
+#mainContainer{
+    -fx-pref-width: 1000;
+    -fx-pref-height: 562;
+}
+.button {
+    -fx-background-color: #292929; /* Сірий фон для кнопок */
+    -fx-text-fill: #ffffff; /* Білий текст для тексту на кнопках */
+}
+.split-pane {
+    -fx-background-color: #292929; /* Темний фон для SplitPane */
+}
+.split-pane-divider {
+    -fx-background-color: #1a1a1a; /* Сірий фон для розділювача SplitPane */
+    -fx-padding: 0 0 0 0; /* Топ, правий, низ, лівий відступи */
+    -fx-background-insets: 0, 0, 1, 0; /* Внутрішні відступи, що визначають товщину лінії */
+}
+.anchor-pane, .vbox, .hbox {
+    -fx-background-color: #0a0a0a; /* Темний фон для різних панелей */
+}

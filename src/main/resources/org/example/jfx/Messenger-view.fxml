@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="mainContainer" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.jfx.MessengerController">
+    <HBox fx:id="navBar" alignment="CENTER">
+        <Button fx:id="Logo">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <Image url="@Icons/Icon_of_app.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="ArrowBack">
+            <graphic>
+                <ImageView fitHeight="15" fitWidth="15">
+                    <Image url="@Icons/arrow_back.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="ArrowForward">
+            <graphic>
+                <ImageView fitHeight="15" fitWidth="15">
+                    <Image url="@Icons/arrow_forward.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <TextField fx:id="searchField"  promptText="Search" styleClass="text-field" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="OptionsAndOther">
+            <graphic>
+                <ImageView fitHeight="20" fitWidth="20">
+                    <Image url="@Icons/Other.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="minimizeButton" onAction="#minimizeWindow">
+            <graphic>
+                <ImageView fitHeight="15" fitWidth="20">
+                    <Image url="@Icons/Minimize.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="maximizeButton" onAction="#maximizeWindow">
+            <graphic>
+                <ImageView fitHeight="10" fitWidth="10">
+                    <Image url="@Icons/Maximize.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="closeButton" onAction="#closeWindow">
+            <graphic>
+                <ImageView fitHeight="18" fitWidth="18">
+                    <Image url="@Icons/Close.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+    <SplitPane fx:id="mainVertDivider" dividerPositions="0.3" VBox.vgrow="ALWAYS">
+        <items>
+            <VBox fx:id="Chats">
+                <HBox fx:id="chatListBar" alignment="CENTER_LEFT">
+                    <Label fx:id="chatListLabel" style="-fx-font-weight: bold" text="Chat"/>
+                </HBox>
+                <ListView fx:id="chatList" VBox.vgrow="ALWAYS">
+                </ListView>
+            </VBox>
+            <AnchorPane>
+                <VBox fx:id="selectedChat" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <HBox fx:id="chatBar" alignment="CENTER_LEFT">
+                        <ImageView fx:id="userImage" id="userAvatar" fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@Icons/Avatar.png"/>
+                        </ImageView>
+                        <Label fx:id="selectedChatLabel" text="Selected Chat"/>
+                    </HBox>
+                    <ListView fx:id="messageList" VBox.vgrow="ALWAYS" />
+                    <HBox>
+                        <TextField fx:id="messageField" promptText="Write a message..." HBox.hgrow="ALWAYS" />
+                        <Button fx:id="sendButton" >
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@Icons/Send.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                </VBox>
+            </AnchorPane>
+        </items>
+    </SplitPane>
+</VBox>
